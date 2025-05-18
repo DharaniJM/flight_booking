@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyReserve - Flight Booking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0d0d0d;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid orange;
+    }
+
+    h1 {
+      color: orange;
+      margin: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    fieldset {
+      border: 1px solid #444;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      background-color: #1c1c1c;
+    }
+
+    legend {
+      padding: 0 10px;
+      color: cyan;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 95%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2e2e2e;
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+    }
+
+    tr:hover {
+      background-color: #252525;
+    }
+
+    section.ticket {
+      border: 2px dashed orange;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #1b1b1b;
+      border-radius: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: #0af;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #333;
+      color: #888;
+    }
+
+    mark {
+      background-color: yellow;
+      color: black;
+    }
+
+    .btn {
+      background-color: orange;
+      color: black;
+      padding: 10px 25px;
+      border-radius: 5px;
+      margin-top: 20px;
+      border: none;
+      font-weight: bold;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SkyReserve ✈️</h1>
+    <p>Your trusted flight booking system</p>
+  </header>
+
+  <main>
+
+    <form>
+      <fieldset>
+        <legend>Passenger Information</legend>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="from">From</label>
+        <input type="text" id="from" name="from" placeholder="Ex: Coimbatore" required />
+
+        <label for="to">To</label>
+        <input type="text" id="to" name="to" placeholder="Ex: Delhi" required />
+
+        <label for="class">Class</label>
+        <select id="class" name="class">
+          <option>Economy</option>
+          <option>Business</option>
+          <option>First Class</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Available Flights</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Flight</th>
+              <th>Departure</th>
+              <th>Arrival</th>
+              <th>Fare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>IndiGo 6E123</td>
+              <td>08:00 AM</td>
+              <td>11:30 AM</td>
+              <td>₹3,499</td>
+            </tr>
+            <tr>
+              <td>Air India AI404</td>
+              <td>01:00 PM</td>
+              <td>04:15 PM</td>
+              <td>₹4,200</td>
+            </tr>
+            <tr>
+              <td>SpiceJet SG505</td>
+              <td>06:45 PM</td>
+              <td>10:00 PM</td>
+              <td>₹3,999</td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+
+      <button type="button" class="btn">Submit (Disabled - Frontend only)</button>
+    </form>
+
+    <details>
+      <summary>📃 View Sample Ticket</summary>
+      <section class="ticket">
+        <h2 style="color: orange;">Boarding Pass</h2>
+        <p><strong>Passenger:</strong> Dharani Jm</p>
+        <p><strong>From:</strong> Coimbatore</p>
+        <p><strong>To:</strong> Delhi</p>
+        <p><strong>Flight:</strong> IndiGo 6E123</p>
+        <p><strong>Date:</strong> 17 May 2025</p>
+        <p><strong>Time:</strong> 08:00 AM</p>
+        <p><mark>NOTE:</mark> Please arrive at the airport 2 hours before departure.</p>
+      </section>
+    </details>
+
+  </main>
+
+  <footer>
+    Made with ❤️ by Dharani — SkyReserve v1.0
+  </footer>
+
+</body>
+</html>
